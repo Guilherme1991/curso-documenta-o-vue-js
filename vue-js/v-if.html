@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-if</title>
+</head>
+<body>
+    <div id="app">
+      <h2 v-if="session">A linha de texto está ativa porque é de valor boolean True!</h2>
+    </div>
+  <!-- versão de desenvolvimento, inclui aviso úteis no console  -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+            session:true
+        }
+    })   
+    </script>
+</body>
+</html>

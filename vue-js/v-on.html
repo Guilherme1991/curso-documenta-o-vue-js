@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-on vue js</title>
+</head>
+<body>
+    <div id="app">
+      {{message}}
+      <button v-on:click="mensagemReversa">Clique aqui</button>
+    </div>
+    
+     <!-- versão de desenvolvimento, inclui aviso úteis no console  -->
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+       var app = new Vue({
+           el: '#app',
+           data: {
+               message: 'Olá vue!!'
+           },
+           methods: {
+            mensagemReversa: function(){
+                this.message = this.message.split('').reverse().join('')
+            }
+           }
+       })
+    </script>
+</body>
+</html>

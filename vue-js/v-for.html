@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-for</title>
+</head>
+<body>
+    <div id="app">s
+      <ol>
+       <li v-for="todo in todos">
+           {{todo.text}}
+       </li>
+    </ol>
+    </div>
+     <!-- versão de desenvolvimento, inclui aviso úteis no console  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+       var app = new Vue({
+           el: '#app',
+           data: {
+               todos: [
+                   {text: 'Número um'},
+                   {text: 'Número dois'},
+                   {text: 'Número tres'},
+                   {text: 'Número quatro'},
+                   {text: 'Número cinco'},
+                   {text: 'Número seis'}
+               ]
+           }
+       })
+    </script>
+</body>
+</html>
